@@ -17,9 +17,11 @@ class DatabaseSeeder extends Seeder
         // Create 1000 users
         User::factory(1000)->create();
 
-        // Call the seeders
+        // // Call the seeders
         $this->call(EventSeeder::class);
         $this->call(AttendeeSeeder::class);
         $this->call(BlogPostSeeder::class);
+        $this->call(TagsTableSeeder::class);
+        $this->call(BlogPostTagTableSeeder::class); 
     }
 }
